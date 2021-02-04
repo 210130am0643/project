@@ -1,1 +1,1 @@
-spring:  thymeleaf:    prefix: classpath:templates/thymeleaf/ # 접두어 classpath:templates/ 가 default     suffix: .html # 접미어    cache: false # 개발시 새로고침하면 적용.
+spring:  thymeleaf:    prefix: classpath:templates/thymeleaf/ # 접두어 classpath:templates/ 가 default     suffix: .html # 접미어    cache: false # 개발시 새로고침하면 적용.  datasource:    driver-class-name: org.mariadb.jdbc.Driver # 드라이버    url: jdbc:mariadb://192.168.0.7:3307/devproject # 주소    username: dev21 # ID    password: dev21 # PASWORDmybatis:  mapper-locations: mapper/**/*.xml # mapper 기본경로 
