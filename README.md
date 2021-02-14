@@ -5,7 +5,7 @@ ex)
 public interface LoginRepository  extends JpaRepository<Login,String>{}
 ```
 jpa 를 상속받았기 때문에 @Repository 사용필요없음.
-
+<모델,id의 타입> 이 들어간다.
 
 application.yml
 ---------------
