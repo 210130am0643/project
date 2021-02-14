@@ -12,7 +12,7 @@ public class LoginService {
 	
 	private final LoginRepository loginRepository;
 	
-	public List<Login> findAll(){
-		return loginRepository.findAll();
+	public void insert(Login login){
+		loginRepository.save(login);
 	}
 }

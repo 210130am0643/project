@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>회원가입</h1>
+	<form action="/join" method="POST">
+		<table>
+			<tr>
+				<th>이름</th>
+				<td>
+					<input type="text" name="userName"/>
+				</td>
+			</tr>
+			<tr>
+				<th>아이디</th>
+				<td>
+					<input type="text" name="userId"/>
+				</td>
+			</tr> 
+			<tr>
+				<th>비밀번호</th>
+				<td>
+					<input type="password" name="password"/>
+				</td>
+			</tr>
+			<tr>
+				<th>비밀번호 확인</th>
+				<td>
+					<input type="password" name="checkPassword"/>
+				</td>
+			</tr>
+			<tr>
+				<td><button>가입</button></td>
+			</tr>
+		</table>
+	</form>
+	<script type="text/javascript">
+		function join(){
+			$.ajax({
+			    url: '/join', // 클라이언트가 요청을 보낼 서버의 URL 주소
+			    data: JSON.stringify($('#joinForm').serializeObject()),
+			    contentType: 'application/json', // json 형태를 위해
+			    dataType: 'json',
+			    type:'POST',
+			    error:function(e){
+			    	console.log('error',e);
+			    }
+			})
+		}
+		jQuery.fn.serializeObject = function() { 
+	      var obj = null; 
+	      try { 
+	          if(this[0].tagName && this[0].tagName.toUpperCase() == "FORM" ) { 
+	              var arr = this.serializeArray(); 
+	              if(arr){ obj = {}; 
+	              jQuery.each(arr, function() { 
+	                  obj[this.name] = this.value; }); 
+	              } 
+	          } 
+	      }catch(e) { 
+	          alert(e.message); 
+	      }finally {} 
+	      return obj; 
+	    }
+	</script>
+</body>
+</html>

@@ -1,14 +1,10 @@
 package com.project.login.service;
 
-import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
-import org.springframework.stereotype.Repository;
-
+import org.springframework.data.jpa.repository.JpaRepository;
 import com.project.login.model.Login;
 
-@Mapper
-@Repository
-public interface LoginRepository {
-	List<Login> findAll();
+public interface LoginRepository  extends JpaRepository<Login,String>{ //model, primary key type
+	
 }

@@ -1,4 +1,4 @@
-package com.project.login.web;
+package com.project;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,14 +9,10 @@ import lombok.RequiredArgsConstructor;
 
 @Controller
 @RequiredArgsConstructor
-public class LoginController {
-
-	@GetMapping("/login")
-	public String login(){
-		return "login/login";
-	}
-	@GetMapping("/join")
-	public String join(){
-		return "login/join";
+public class IndexController {
+	
+	@GetMapping("/")
+	public String index(){
+		return "index";
 	}
 }
