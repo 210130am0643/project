@@ -1,5 +1,14 @@
+JPA repository
+---------------
+```
+ex) 
+public interface LoginRepository  extends JpaRepository<Login,String>{}
+```
+jpa 를 상속받았기 때문에 @Repository 사용필요없음.
+
+
 application.yml
---------------
+---------------
 ```
 spring:   
   thymeleaf:
