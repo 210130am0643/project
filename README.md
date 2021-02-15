@@ -32,7 +32,7 @@ public class Security extends WebSecurityConfigurerAdapter{
 	}
 }
 ```
-# sessionDetails
+## sessionDetails
 ```
 public class SessionDetails implements UserDetails{
 
@@ -55,7 +55,7 @@ public class SessionDetails implements UserDetails{
 		return collection;
 	}
 ```
-# sessionDetailsService
+## sessionDetailsService
 * security에서 loginProcessingUrl 요청이 오면 여기로 온다.
 * session(내부 Authentication (내부 UserDetails))
 * username 으로 파라미터 값은 고정되어 맵핑된다. security에서 usernameparameter 를 수정해주어야함.
